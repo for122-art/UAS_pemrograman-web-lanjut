@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #16a34a;
+  --green-dark: #15803d;
+  --green-soft: #dcfce7;
+  --text: #1f2937;
+  --text-soft: #6b7280;
+  --white: #ffffff;
+}
+
+/* FULL SCREEN */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: var(--text);
+
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* FULL WIDTH PAGE */
+.page {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* ================= HERO ================= */
+
+.hero-section {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 35px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.small-text {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  margin-top: 75px;
+}
+
+.headline {
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--green);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.about-matcha {
+  max-width: 760px;
+  margin: 25px auto 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.about-matcha h2 {
+  color: var(--green-dark);
+  margin-bottom: 8px;
+}
+
+.about-matcha p {
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* ================= NAV BUTTON ================= */
+
+.nav-btn {
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--green-dark);
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================= INFO ================= */
+
+.bottom-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 22px;
+  border-radius: 22px;
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.info-box h3 {
+  color: var(--green-dark);
+  margin-bottom: 8px;
+}
+
+.info-box p {
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .headline {
+    font-size: 42px;
+  }
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .headline {
+    font-size: 30px;
+  }
+}

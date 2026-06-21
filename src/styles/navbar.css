@@ -1,0 +1,178 @@
+.navbar {
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(22, 163, 74, 0.08);
+
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  transform: translateY(0);
+  opacity: 1;
+
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s ease;
+
+  will-change: transform, opacity;
+}
+
+.navbar.hide {
+  transform: translateY(-110%);
+  opacity: 0;
+}
+
+.navbar.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ================= BRAND ================= */
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo-img {
+  height: 55px;
+  width: auto;
+}
+
+/* ================= TEXT ================= */
+
+.nav-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav-top {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #166534;
+}
+
+.nav-bottom {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #16a34a;
+  text-transform: uppercase;
+}
+
+/* ================= OPENING HOURS ================= */
+
+.opening-hours {
+  text-align: right;
+  margin-left: auto;
+  color: #166534;
+}
+
+.opening-hours h4 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.opening-hours p {
+  margin: 2px 0;
+  font-size: 16px;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ================= CART ================= */
+
+.cart-icon {
+  position: relative;
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.25s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.08);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+
+  min-width: 22px;
+  height: 22px;
+
+  background: #ef4444;
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  padding: 2px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+
+  .nav-right {
+    gap: 18px;
+  }
+
+  .opening-hours h4 {
+    font-size: 18px;
+  }
+
+  .opening-hours p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .opening-hours {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .cart-icon {
+    font-size: 30px;
+  }
+}
