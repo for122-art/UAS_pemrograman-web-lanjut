@@ -91,7 +91,7 @@ Total Harga : Rp ${totalPrice.toLocaleString("id-ID")}
 Terima kasih.`
 
     window.open(
-      `https://wa.me/6289670365186?text=${encodeURIComponent(message)}`,
+      `https://wa.me/6289508228246?text=${encodeURIComponent(message)}`,
       '_blank'
     )
 
